@@ -320,10 +320,10 @@ private:
     }
 
 private:
-    segment_iterator               _saltator;  // satltare: to jump  : the fast moving iterator
-    mutable domain_difference_type _reptator;  // reptare:  to sneak : the slow moving iterator 0 based
-    mutable domain_type            _inter_pos; // inter position : Position within the current segment
-                                               // _saltator->first.first() <= _inter_pos <= _saltator->first.last() 
+    segment_iterator               _saltator;    // satltare: to jump  : the fast moving iterator
+    mutable domain_difference_type _reptator;    // reptare:  to sneak : the slow moving iterator 0 based
+    mutable domain_type            _inter_pos{}; // inter position : Position within the current segment
+                                                 // _saltator->first.first() <= _inter_pos <= _saltator->first.last() 
 };
 
 }} // namespace icl boost
